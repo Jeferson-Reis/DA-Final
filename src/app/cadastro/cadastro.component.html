@@ -1,0 +1,62 @@
+<div>
+    <!-- logo isolada -->
+    <h1>
+        <img class="offset-7 col-md-2 img-fluid p-2" src="assets/img/ford.png" />
+    </h1>
+</div>
+
+<div class="row align-items-center justify-content-center h-100">
+
+    <div class="col-md-4 opacity-75">
+        <img class="img-fluid" src="assets/img/ranger.png" />
+    </div>
+
+    <div class="col-md-4 text-success">
+        <h5 class="text-center">Cadastro</h5>
+        <form #loginForm="ngForm" (ngSubmit)="cadastrar()">
+            <div class="form-group">
+                <div class="input-group  m-3">
+                    <span class="input-group-text" id="inputGroupPrepend">
+                        <i class="bi bi-person"></i>
+                    </span>
+                    <input [(ngModel)]="usuario" name="usuario" type="text" class="form-control" placeholder="Login" />
+                    <i class="bi bi-info-circle m-2"></i>
+                </div>
+                <div class="input-group  m-3">
+                    <span class="input-group-text" id="inputGroupPrepend">
+                        <i class="bi bi-person"></i>
+                    </span>
+                    <input [(ngModel)]="nomeCompleto" name="nomeCompleto" type="text" class="form-control" placeholder="Nome Completo" />
+                    <i class="bi bi-info-circle m-2"></i>
+                </div>
+                <div class="input-group  m-3">
+                    <span class="input-group-text" id="inputGroupPrepend">
+                        <i class="bi bi-person"></i>
+                    </span>
+                    <input [(ngModel)]="email" name="email" type="text" class="form-control" placeholder="Email" />
+                    <i class="bi bi-info-circle m-2"></i>
+                </div>
+                <div class="input-group  m-3">
+                    <span class="input-group-text" id="inputGroupPrepend">
+                        <i class="bi bi-lock"></i>
+                    </span>
+                    <input [(ngModel)]="senha" name="senha" type="password" class="form-control" placeholder="Senha" />
+                    <i class="bi bi-info-circle m-2"></i>
+                </div>
+                <div class="input-group  m-3">
+                    <span class="input-group-text" id="inputGroupPrepend">
+                        <i class="bi bi-lock"></i>
+                    </span>
+                    <input [(ngModel)]="senha2" name="senha2" type="password" class="form-control" placeholder="Confinme a Senha" />
+                    <i class="bi bi-info-circle m-2"></i>
+                </div>
+                <button type="submit" class="btn btn-secondary col-11 m-3">Cadastrar</button>
+            </div>
+        </form>
+        <div class="col">
+            <p class="text-center">
+                Já tem cadastro? Clique <a class="text-success" routerLink="/login">aqui</a> para fazer login.
+            </p>
+        </div>
+    </div>
+</div>
